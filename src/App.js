@@ -1,10 +1,10 @@
 import React from "react";
-import StringCalculator from "./components/StringCalculator";
+import Calculator from "./components/Calculator/Calculator";
 
 function App() {
   return (
     <div className="App">
-      Initial Setup
+      <Calculator />
     </div>
   );
 }
