@@ -27,12 +27,12 @@ function Calculator() {
     <div className="container">
       <h2>String Calculator</h2>
       <form onSubmit={handleSubmit} className="form">
-        <input
-          type="text"
-          placeholder="Enter numbers (comma-separated)"
+        <textarea
+          placeholder="Please enter numbers separated by commas or newlines"
           value={input}
           onChange={handleInputChange}
           className="input"
+          rows="4"
         />
         <button type="submit" className="button">Calculate</button>
       </form>
