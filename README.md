@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# String Calculator Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple **String Calculator** application built with **React** and follows **Test-Driven Development (TDD)** principles. It allows users to input comma-separated numbers, calculates the sum, and displays the result. Additionally, it supports custom delimiters and handles newline-separated numbers.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Technologies](#technologies)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Testing](#testing)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Input comma-separated numbers in a multi-line format.
+- Support for newline characters as delimiters.
+- Option for custom delimiters.
+- Displays error message if input contains negative numbers.
+- Follows Test-Driven Development (TDD) principles with frequent commits.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies
 
-### `npm test`
+- **React**: Frontend framework used for building the UI.
+- **CSS**: For styling the components in a separate CSS file.
+- **Jest**: Testing framework for ensuring code quality and correctness.
+- **Git**: Version control to track development progress.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```plaintext
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+.
+├── public
+│   └── index.html
+├── src
+│   ├── components
+│   │   └── Calculator
+│   │       ├── Calculator.jsx     # Main calculator component
+│   │       └── Calculator.css     # CSS file for Calculator component styling
+│   ├── utils
+│   │   ├── StringCalculator.js    # Contains add function with TDD logic
+│   │   └── StringCalculator.test.js # Test file for StringCalculator.js
+│   ├── App.js                     # Root component
+│   ├── App.css                    # CSS file for Root component
+│   └── index.js                   # Entry point
+├── package.json
+└── README.md                      # Project documentation
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+1. **Clone the Repository**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+   git clone https://github.com/pushpendrakukreti/string-calculator.git
+   cd string-calculator
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Install Dependencies**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+   npm install
+```
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Run the application**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+   npm start
+```
 
-### Code Splitting
+2. **Open the App in Browser**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Go to http://localhost:3000 to view the app in the browser.
 
-### Analyzing the Bundle Size
+3. **Using the Calculator**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Enter Numbers: Use the provided textarea to input numbers separated by commas or newlines.
+- Calculate: Click on the Calculate button to see the sum.
+- Result: The result will appear below the button.
+- Error Handling: If negative numbers are entered, an error message will be displayed.
 
-### Making a Progressive Web App
+## Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+   npm test
+```
